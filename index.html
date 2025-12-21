@@ -1,99 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>University GPA Calculator</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 24px; background: #111; color: #eee; }
-  .grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr 1fr 60px; align-items: center; }
-  input, select, button { padding: 8px; border-radius: 8px; border: 1px solid #444; background: #1b1b1b; color: #eee; }
-  .row { display: contents; }
-  .row:nth-child(odd) input, .row:nth-child(odd) select { background: #161616; }
-  .gpa { font-size: 1.4rem; margin-top: 16px; }
-  .add { margin-top: 12px; }
-</style>
+
+  <title>Mahesh Nadun</title>
+  <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
-<h1>University GPA Calculator</h1>
+  <header class="header">
+    <h1>University GPA Calculator</h1>
+    <p class="sub">Enter courses, credits, and grades. GPA updates live.</p>
+  </header>
 
-<div id="courses" class="grid" aria-live="polite">
-  <strong>Course</strong><strong>Credits</strong><strong>Grade</strong><span></span>
-</div>
-<button class="add" id="addBtn">+ Add course</button>
-<div class="gpa" id="gpa">GPA: 0.00</div>
+  <main>
+    <section class="controls">
+      <button id="addBtn" class="btn">+ Add course</button>
+      <button id="resetBtn" class="btn btn-outline">Reset</button>
+    </section>
 
-<script>
-const gradePoints = {
-  "A": 4.0, "A-": 3.7,
-  "B+": 3.3, "B": 3.0, "B-": 2.7,
-  "C+": 2.3, "C": 2.0, "C-": 1.7,
-  "D": 1.0, "F": 0.0
-};
+    <section id="courses" class="grid" aria-live="polite">
+      <div class="grid-header">Course</div>
+      <div class="grid-header">Credits</div>
+      <div class="grid-header">Grade</div>
+      <div class="grid-header"></div>
+      
+    </section>
 
-const coursesEl = document.getElementById("courses");
-const gpaEl = document.getElementById("gpa");
-const addBtn = document.getElementById("addBtn");
+    <section class="result">
+      <div class="metric">
+        <span class="label">Total credits</span>
+        <span id="totalCredits" class="value">0</span>
+      </div>
+      <div class="metric">
+        <span class="label">GPA</span>
+        <span id="gpa" class="value">0.00</span>
+      </div>
+    </section>
+  </main>
 
-function addRow(code="", credits="", grade="A") {
-  const row = document.createElement("div");
-  row.className = "row";
+  <footer class="footer">
+    <small>Mahesh Nadun | University of Vavuniya</small>
+  </footer>
 
-  const codeInput = document.createElement("input");
-  codeInput.placeholder = "CS101";
-  codeInput.value = code;
-
-  const creditsInput = document.createElement("input");
-  creditsInput.type = "number";
-  creditsInput.min = "0";
-  creditsInput.step = "0.5";
-  creditsInput.placeholder = "3";
-  creditsInput.value = credits;
-
-  const gradeSelect = document.createElement("select");
-  Object.keys(gradePoints).forEach(g => {
-    const opt = document.createElement("option");
-    opt.value = g; opt.textContent = g;
-    if (g === grade) opt.selected = true;
-    gradeSelect.appendChild(opt);
-  });
-
-  const del = document.createElement("button");
-  del.textContent = "✕";
-  del.addEventListener("click", () => { row.remove(); updateGPA(); });
-
-  [codeInput, creditsInput, gradeSelect, del].forEach(el => {
-    coursesEl.appendChild(el);
-    if (el !== del) el.addEventListener("input", updateGPA);
-  });
-
-  updateGPA();
-}
-
-function updateGPA() {
-  let totalCredits = 0;
-  let totalWeighted = 0;
-  const children = Array.from(coursesEl.children).slice(4); // skip headers
-  for (let i = 0; i < children.length; i += 4) {
-    const codeInput = children[i];
-    const creditsInput = children[i+1];
-    const gradeSelect = children[i+2];
-
-    const credits = parseFloat(creditsInput.value);
-    const grade = gradeSelect.value;
-
-    if (!isNaN(credits) && credits > 0 && gradePoints[grade] !== undefined) {
-      totalCredits += credits;
-      totalWeighted += credits * gradePoints[grade];
-    }
-  }
-  const gpa = totalCredits > 0 ? (totalWeighted / totalCredits) : 0;
-  gpaEl.textContent = `GPA: ${gpa.toFixed(2)}`;
-}
-
-addBtn.addEventListener("click", () => addRow());
-addRow("CS101", 3, "A-");
-addRow("MA102", 2, "B+");
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
