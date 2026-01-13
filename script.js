@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     setTimeout(() => {
-        showNotification('📚Welcome to EduLibrary!');
+        showNotification('🚀Welcome to EduLibrary!');
     }, 1000);
     
     
@@ -216,4 +216,5 @@ document.addEventListener('touchend', function(event) {
     }
     lastTouchEnd = now;
 }, false);
+
 
