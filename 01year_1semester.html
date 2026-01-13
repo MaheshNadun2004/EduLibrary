@@ -2,192 +2,112 @@
 <html lang="si">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UOV – 01 Year 01 Semester</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>UOV | 01 Year 01 Semester | EduLibrary</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" 
-rel="stylesheet">
-
-<style>
-:root{
-  --primary:#6a11cb;
-  --secondary:#2575fc;
-  --accent:#ff9f43;
-  --dark:#2f3640;
-  --light:#f5f6fa;
-  --shadow:0 10px 25px rgba(0,0,0,0.12);
-  --transition:all .3s ease;
-}
-
-*{box-sizing:border-box;}
-
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(135deg,#eef2ff,#f5f6fa);
-  min-height:100vh;
-  padding:2rem 1rem;
-}
-
-/* Title */
-h1{
-  text-align:center;
-  font-size:2rem;
-  margin-bottom:2rem;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-/* Grid */
-ul{
-  list-style:none;
-  padding:0;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:1.5rem;
-  max-width:900px;
-  margin:0 auto;
-}
-
-/* Card */
-li{
-  background:#fff;
-  border-radius:18px;
-  box-shadow:var(--shadow);
-  padding:1rem;
-  text-align:center;
-  transition:var(--transition);
-  position:relative;
-  overflow:hidden;
-}
-
-li::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:4px;
-  background:linear-gradient(to right,var(--primary),var(--secondary));
-}
-
-li:hover{
-  transform:translateY(-6px);
-  box-shadow:0 16px 35px rgba(0,0,0,0.18);
-}
-
-/* Image */
-img{
-  width:110px;
-  height:140px;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:.8rem;
-  box-shadow:0 6px 15px rgba(0,0,0,0.15);
-  transition:var(--transition);
-}
-
-li:hover img{
-  transform:scale(1.05);
-}
-
-/* Link */
-a{
-  text-decoration:none;
-  color:var(--dark);
-  font-weight:600;
-  font-size:1rem;
-  display:block;
-}
-
-a span{
-  display:inline-block;
-  margin-top:.3rem;
-  font-size:.85rem;
-  color:#718093;
-}
-
-li:hover a{
-  color:var(--accent);
-}
-
-/* Small screens */
-@media(max-width:480px){
-  h1{font-size:1.6rem;}
-}
-</style>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="CSS.css">
 </head>
 
 <body>
 
-<h1>📘 01 Year – 1st Semester</h1>
+<div class="app">
 
-<ul>
-  <li>
-    <a href="https://drive.google.com/drive/folders/1ungw1dMfMesc4F5iNwOOvgJyxqMBL20E?usp=sharing" 
-    target="_blank">
-      <img src="C++.jpg" alt="C++">
-      C++
-      <span>Lecture Notes & Materials</span>
-    </a>
-  </li>
+    <header>
+    <h1>📘 01 Year – 1st Semester</h1>
+    <p>University of Vavuniya • ICT</p>
 
-  <li>
-    <a href="https://drive.google.com/drive/folders/1m4nH20_pbOPrCphSscjihsY8pZMBS2xi?usp=sharing" 
-    target="_blank">
-      <img src="EICT.jpg" alt="EICT">
-      EICT
-      <span>Course Resources</span>
-    </a>
-  </li>
+    <div class="stats">
+        <div class="stat">
+            <strong>7</strong>
+            <span>Subjects</span>
+        </div>
+        <div class="stat">
+            <strong>24/7</strong>
+            <span>Access</span>
+        </div>
+        <div class="stat">
+            <strong>100%</strong>
+            <span>Free</span>
+        </div>
+    </div>
+</header>
 
-  <li>
-    <a href="https://drive.google.com/drive/folders/1HsyzqUaJ88K9A5rflUX-lRlKHXbErxMN?usp=sharing" 
-    target="_blank">
-      <img src="webpra.jpg" alt="webpra">
-      Web (Practical)
-      <span>Course Resources</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https://drive.google.com/drive/folders/1HsyzqUaJ88K9A5rflUX-lRlKHXbErxMN?usp=sharing" 
-    target="_blank">
-      <img src="webte.jpg" alt="webte">
-      Web (Theory)
-      <span>Course Resources</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https://drive.google.com/drive/folders/10D5E-g0crpXHjZ25JJFjllGVVuloZ_fz?usp=sharing" 
-    target="_blank">
-      <img src="Mathamatics.jpg" alt="Mathamatics">
-      Mathematics for technology
-      <span>Course Resources</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https://drive.google.com/drive/folders/1117boxHrhgnnAltMcM4fWH-uy75Vjxg6?usp=sharing" 
-    target="_blank">
-      <img src="Principles.jpg" alt="Principles">
-      Principles of management   
-      <span>Course Resources</span>
-    </a>
-  </li>
-  
-  <li>
-    <a href="https://drive.google.com/drive/folders/1cNDlYpY3vLoVdxzL6ggHeW_RIoKgA4mX?usp=sharing" 
-    target="_blank">
-      <img src="pepar.jpg" alt="pepar">
-      Past Paper   
-      <span>Course Resources</span>
-    </a>
-  </li>
-  
-</ul>
+
+<section class="books">
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1ungw1dMfMesc4F5iNwOOvgJyxqMBL20E">
+    <img src="C++.jpg">
+    <div class="book-content">
+        <div class="book-title">C++ Programming</div>
+        <div class="book-sub">Lecture Notes & Materials</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1m4nH20_pbOPrCphSscjihsY8pZMBS2xi">
+    <img src="EICT.jpg">
+    <div class="book-content">
+        <div class="book-title">EICT</div>
+        <div class="book-sub">Course Resources</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1HsyzqUaJ88K9A5rflUX-lRlKHXbErxMN">
+    <img src="webpra.jpg">
+    <div class="book-content">
+        <div class="book-title">Web Dev (Practical)</div>
+        <div class="book-sub">Lab Materials</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1HsyzqUaJ88K9A5rflUX-lRlKHXbErxMN">
+    <img src="webte.jpg">
+    <div class="book-content">
+        <div class="book-title">Web Dev (Theory)</div>
+        <div class="book-sub">Lecture Notes</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/10D5E-g0crpXHjZ25JJFjllGVVuloZ_fz">
+<img src="Mathamatics.jpg">
+    <div class="book-content">
+        <div class="book-title">Mathematics</div>
+        <div class="book-sub">Problem Sets</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1117boxHrhgnnAltMcM4fWH-uy75Vjxg6">
+    <img src="Principles.jpg">
+    <div class="book-content">
+        <div class="book-title">Management</div>
+        <div class="book-sub">Notes & Case Studies</div>
+    </div>
+</a>
+
+<a class="book" target="_blank"
+href="https://drive.google.com/drive/folders/1cNDlYpY3vLoVdxzL6ggHeW_RIoKgA4mX">
+    <img src="pepar.jpg">
+    <div class="book-content">
+        <div class="book-title">Past Papers</div>
+        <div class="book-sub">Exam Preparation</div>
+    </div>
+</a>
+
+</section>
+
+<footer>
+©  EduLibrary • University • Academic Resources
+</footer>
+
+</div>
 
 </body>
 </html>
